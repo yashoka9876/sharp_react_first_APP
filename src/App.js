@@ -1,7 +1,6 @@
 import ExpenseItem from "./components/ExpenseItem";
 
 function App() {
-  const arr=['1','2']
 
   const expenses=[
     {
