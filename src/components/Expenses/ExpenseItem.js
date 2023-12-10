@@ -1,7 +1,7 @@
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import ExpenseDetails from './ExpenseDetails';
-import Card from './Card';
+import Card from '../UI/Card';
 import React from 'react';
 function ExpenseItem(props){
     // const expneseDate= new Date(2021,2,28);
