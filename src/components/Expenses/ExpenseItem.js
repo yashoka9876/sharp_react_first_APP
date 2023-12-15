@@ -10,13 +10,10 @@ function ExpenseItem(props){
 
     const clickHandler = ()=>{
         setTitle('Updated');
-        console.log(title);
     }
     const amountHandler=()=>{
         setAmound(100);
     }
-    console.log("by")
-    console.log(title)
   
     
     return(
