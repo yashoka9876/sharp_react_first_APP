@@ -1,10 +1,12 @@
 
 import Expenses from "./components/Expenses/Expenses";
-import React from 'react';
-import { ExpenseForm, NewExpense } from "./components/NewExpense/NewExpense";
+import React, { useState } from 'react';
+import { NewExpense } from "./components/NewExpense/NewExpense";
+
+
 
 const App=()=> {
-  const expenses=[
+  const data=[
     {
       id:'e1',
       title:'Toilet Paper',
@@ -34,17 +36,23 @@ const App=()=> {
       location_of_expenditure:"Amritsar"
     }
   ]
+  const [expenses,setExpenses]=useState(data);
+  
+  const addExpenseHandler = expense1 =>{
+    console.log('In App.js');
+    console.log(expenses.date);
+    setExpenses(expense=>[...expense,expense1])
 
-  // return React.createElement('div',
-  // {},
-  // React.createElement('h2',{},'let\'s get started'),
-  // React.createElement(Expenses,{expenses:expenses})
-  // )
+  }
+  setTimeout(()=>{
+    console.log(expenses)
+  },1000)
+ 
 
   return (
     <div>
       <h2>let's get started</h2>
-      <NewExpense />
+      <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses}/>
     </div>
   );
