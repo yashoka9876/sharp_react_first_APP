@@ -2,6 +2,7 @@
 import Expenses from "./components/Expenses/Expenses";
 import React, { useState } from 'react';
 import { NewExpense } from "./components/NewExpense/NewExpense";
+import ExpensesFilter from "./components/Expenses/ExpencesFilter";
 
 
 
@@ -54,6 +55,7 @@ const App=()=> {
       <h2>let's get started</h2>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses}/>
+      <ExpensesFilter />
     </div>
   );
 }
