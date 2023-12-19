@@ -5,3 +5,12 @@
     width: 50rem;
     max-width: 95%;
 }
+
+.textStyleP{
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  padding: 10px;
+  display: inline-block;
+  margin: 0 20%;
+}

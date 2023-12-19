@@ -2,41 +2,41 @@
 import Expenses from "./components/Expenses/Expenses";
 import React, { useState } from 'react';
 import { NewExpense } from "./components/NewExpense/NewExpense";
-import ExpensesFilter from "./components/Expenses/ExpencesFilter";
+const data=[
+  {
+    id:'e1',
+    title:'Toilet Paper',
+    amount:232,
+    date:new Date(2022,2,28),
+    location_of_expenditure:"delhi"
+  },
+  {
+    id:'e2',
+    title:'Tourism',
+    amount:232,
+    date:new Date(2022,2,28),
+    location_of_expenditure:"chandigarh"
+  },
+  {
+    id:'e3',
+    title:'study',
+    amount:232,
+    date:new Date(2019,2,28),
+    location_of_expenditure:"hariyana"
+  },
+  {
+    id:'e4',
+    title:'meals',
+    amount:232,
+    date:new Date(2020,2,28),
+    location_of_expenditure:"Amritsar"
+  }
+]
 
 
 
 const App=()=> {
-  const data=[
-    {
-      id:'e1',
-      title:'Toilet Paper',
-      amount:232,
-      date:new Date(2022,2,28),
-      location_of_expenditure:"delhi"
-    },
-    {
-      id:'e2',
-      title:'Toilet Paper',
-      amount:232,
-      date:new Date(2022,2,28),
-      location_of_expenditure:"chandigarh"
-    },
-    {
-      id:'e3',
-      title:'Toilet Paper',
-      amount:232,
-      date:new Date(2022,2,28),
-      location_of_expenditure:"hariyana"
-    },
-    {
-      id:'e4',
-      title:'Toilet Paper',
-      amount:232,
-      date:new Date(2022,2,28),
-      location_of_expenditure:"Amritsar"
-    }
-  ]
+ 
   const [expenses,setExpenses]=useState(data);
   
   const addExpenseHandler = expense1 =>{
@@ -55,7 +55,6 @@ const App=()=> {
       <h2>let's get started</h2>
       <NewExpense onAddExpense={addExpenseHandler} />
       <Expenses expenses={expenses}/>
-      <ExpensesFilter />
     </div>
   );
 }

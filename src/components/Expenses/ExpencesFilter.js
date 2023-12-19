@@ -2,12 +2,15 @@ import React from 'react';
 
 import './ExpencesFilter.css';
 
-const ExpensesFilter = () => {
+const ExpensesFilter = ({handleFilterItem}) => {
+    function handleOption(event){
+        handleFilterItem(event.target.value);
+    }
   return (
     <div className='expenses-filter'>
       <div className='expenses-filter__control'>
         <label>Filter by year</label>
-        <select>
+        <select onChange={handleOption}>
           <option value='2022'>2022</option>
           <option value='2021'>2021</option>
           <option value='2020'>2020</option>
