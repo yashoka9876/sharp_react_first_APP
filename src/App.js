@@ -2,36 +2,32 @@
 import Expenses from "./components/Expenses/Expenses";
 import React, { useState } from 'react';
 import { NewExpense } from "./components/NewExpense/NewExpense";
-const data=[
+const data = [
   {
     id:'e1',
     title:'Toilet Paper',
-    amount:232,
-    date:new Date(2022,2,28),
-    location_of_expenditure:"delhi"
+    amount:102.12,
+    date:new Date(2020,7,30)
   },
   {
     id:'e2',
-    title:'Tourism',
-    amount:232,
-    date:new Date(2022,2,28),
-    location_of_expenditure:"chandigarh"
+    title:'TV',
+    amount:111.12,
+    date:new Date(2022,8,25)
   },
   {
-    id:'e3',
-    title:'study',
-    amount:232,
-    date:new Date(2019,2,28),
-    location_of_expenditure:"hariyana"
+    id:'e13',
+    title:'Car Insurance',
+    amount:500.12,
+    date:new Date(2022,9,4)
   },
   {
     id:'e4',
-    title:'meals',
-    amount:232,
-    date:new Date(2020,2,28),
-    location_of_expenditure:"Amritsar"
+    title:'New Desk (Wooden)',
+    amount:221.12,
+    date:new Date(2021,2,1)
   }
-]
+];
 
 
 
