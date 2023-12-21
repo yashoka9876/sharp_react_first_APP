@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Card from "../UI/Card";
 import ExpensesFilter from "./ExpencesFilter";
 import ExpenseItem from "./ExpenseItem";
 import './Expenses.css'
+import ExpensesChart from "./ExpensesChart";
 
 
 
@@ -46,6 +47,7 @@ function Expenses({expenses}){
     
     return (
        <Card className="expense">
+            <ExpensesChart expenses={filterExpences}/>
             <ExpensesFilter handleFilterItem={handleFilteredItems}/>
             {content}
             {filterExpences.length===1 && <p className="textStyleP">One element is present add more...</p>}
